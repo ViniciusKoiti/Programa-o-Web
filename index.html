@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recibo Simples</title>
+</head>
+<body>
+    <div class="container">
+    
+        <h1>Recibo Simples</h1>
+    <form>
+        <div class="row">
+            <div class="column">
+                <label for="valor">Valor:</label>
+                <input type="text" id="valor" pattern="^[0-9]+(\.[0-9]{1,2})?$">
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="nome-pagador">Nome do Pagador:</label>
+            <input type="text" id="nome-pagador">
+        
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label for="cpf-cnpj">CPF ou CPNJ (opcional): </label>
+                <input type="text" id="cpf-cnpj">
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="referente">Referente à:</label>
+            <input type="text" id="referente">
+        
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade">
+            
+            </div>
+
+            <div class="column">
+                <label for="data">Data:</label>
+                <input type="date" id="">
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="nome-emissor">Nome do Emissor:</label>
+            <input type="text" id="nome-emissor">
+        
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone">
+           
+            </div>
+
+            <div class="column">
+                <label for="cpf-cnpj-emissor">CPF ou CNPJ: </label>
+                <input type="text" id="cpf-cnpj-emissor">
+           
+            </div>
+        </div>
+
+        <div class="row">
+           <h4>Forma de Pagamento</h4>
+                <label for="dinheiro">Dinheiro</label>
+                <input type="checkbox" name="formaPagamento" id="dinheiro">
+                
+                <label for="pix">Pix</label>
+                <input type="checkbox" name="formaPagamento" id="pix">
+                
+                <label for="cheque">Cheque </label>
+                <input type="checkbox" name="formaPagamento" id="cheque">
+                
+                <label for="transferencia">Transferência/Depósito</label>
+                <input type="checkbox" name="formaPagamento" id="transferencia">
+                
+                <label for="cartao-credito">Cartão de Crédito</label>
+                <input type="checkbox" name="formaPagamento" id="cartao-credito">
+        </div>
+
+        <div class="row hidden" id="hiddenPix">
+            <label for="nomeRecebedor">Quem recebeu?</label>
+            <input type="text" name="nomeRecebedor" id="nomeRecebedor">
+            <label for="bancoInstitucao">Instituição/Banco:</label>
+            <input type="text" name="bancoInstitucao" id="bancoInstitucao">
+            <label for="bancoInstitucao">Chave:</label>
+            <input type="text" name="chave" id="chave">
+        </div>
+
+        <div class="row hidden" id="hiddenCheque">
+            <label for="cheque">N° do Cheque:</label>
+            <input type="text" name="cheque" id="cheque">
+            <label for="banco">Banco</label>
+            <input type="text" name="banco" id="banco">
+            <label for="agencia">Agência:</label>
+            <input type="text" name="agencia" id="agencia">
+            <label for="bomparaData">Bom para..</label>
+            <input type="text" name="bomparaData" id="bomparaData">
+        </div>
+
+        <div class="row hidden" id="hiddenTransferencia">
+            <label for="cheque">Conta:</label>
+            <input type="text" name="cheque" id="cheque">
+            <label for="banco">Agência:</label>
+            <input type="text" name="banco" id="banco">
+            <label for="agencia">Data:</label>
+            <input type="text" name="agencia" id="agencia">
+            <label for="bomparaData">Banco:</label>
+            <input type="text" name="bomparaData" id="bomparaData">
+            <label for="agencia">Favorecido:</label>
+            <input type="text" name="agencia" id="agencia">
+            <label for="bomparaData">N° do documento:</label>
+            <input type="text" name="bomparaData" id="bomparaData">
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label for="duas-vias">Duas vias?</label>
+                <br>
+                <input type="checkbox" id="duas-vias">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="button">
+            <span></span>
+            <h2>Gerar Recibo</h2>
+        </div>
+    </form>
+    <script src="radiobutton.js"></script>
+
+    
+    </body>
+</html>
